@@ -7,6 +7,9 @@
 			font-family: "Poppins", sans-serif;
 		}
 
+		html {
+			scroll-behavior: smooth;
+		}
 		header{
 			width: 100%;
 			height: 80px;
@@ -75,6 +78,7 @@
 		
 		.container .left-side{
 			width: 100%;
+			animation: left-side 2s ease-in-out;
 		}
 
 		.container .left-side .image{
@@ -105,6 +109,7 @@
 		.container .right-side{
 			width: 100%;
 			padding: 10px 20px;
+			animation: right-side 2s ease-in-out;
 		}
 
 		.container .right-side .name{
@@ -134,6 +139,80 @@
 
 		.right-side .tech-icon{
 			font-size: 2.5rem;
+		}
+
+		@keyframes left-side {
+			from{
+				opacity: 0;
+				transform: translateX(-100%);
+			}
+			to{
+				opacity: 1;
+				transform: translateX(0);
+			}
+		}
+
+		@keyframes right-side {
+			from{
+				opacity: 0;
+				transform: translateY(100%);
+			}
+			to{
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+
+
+		.about-me{
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			height: 100vh;
+			padding-top: 50px;
+		}
+
+		.about-me .aboutMe-left{
+			width: 100%;
+			padding: 25px 100px;
+		}
+
+		.aboutMe-left h1{
+			text-transform: uppercase;
+			font-size: 17px;
+			color: red;
+			margin: 10px 0;
+		}
+
+		.aboutMe-left h2{
+			font-size: 2rem;
+		}
+
+		.aboutMe-left p{
+			font-size: 17px;
+			margin: 30px 0;
+		}
+
+		.aboutMe-left a{
+			text-decoration: none;
+			color: white;
+			padding: 10px 20px;
+			background-color: black;
+			border-radius: 20px;
+			text-transform: uppercase;
+		}
+
+		.about-me .aboutMe-right{
+			width: 100%;
+			text-align: center;
+		}
+
+		.aboutMe-right img{
+			border-radius: 30px 60px 40px 80px;
+			border: 1px solid black;
+			margin-right: 100px;
+			width: 400px;
+			height: 400px;
 		}
 
 		@media only screen and (max-width:600px) {
@@ -223,6 +302,7 @@
 				height: 350px;
 				border-radius: 50%;
 				background-color: black;
+				background-size: contain;
 			}
 
 		}
